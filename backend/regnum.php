@@ -2,12 +2,12 @@
 
   include "database.php";
 
-  $sql = "SELECT Count(*) FROM registration";
+  $sql = "SELECT Count(*) as REG FROM registration";
   $result = $conn->query($sql);
   if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        $msg=$row["Count (*)"];
+        $msg=$row["REG"];
     }
     } else {
       $msg="0";
