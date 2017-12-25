@@ -10,7 +10,7 @@
         $msg=$row["Count (*)"];
     }
     } else {
-      $msg="0"
+      $msg="0";
     }
   echo json_encode($msg);
 
