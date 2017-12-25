@@ -2,13 +2,13 @@
 
 include "database.php";
 
-$name = $_GET["name"];
+$name = test_input($_GET["name"]);
 $email= $_GET["email"];
 $cnum= test_input($_GET["cnum"]);
 $reg_type= test_input($_GET["reg_type"]);
 
 
-$sql = 'INSERT INTO `registration`( `name`, `email`, `cnum`, `reg_type`) VALUES ("","","","")';
+$sql = "INSERT INTO `registration`( `name`, `email`, `cnum`, `reg_type`) VALUES ("$name","$email","$cnum","$reg_type")";
 
 if (mysqli_query($conn, $sql)) {
     $msg="Registration Successful";
