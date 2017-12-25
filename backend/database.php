@@ -6,11 +6,12 @@ $dbname = "aylcdb";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
+
 // Check connection
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    $msg = "Connection failed: " . $conn->connect_error;
 }
-echo "Connected successfully";
+$msg = "Connected successfully";
 
-mysqli_close($conn);
+echo json_encode($msg);
 ?>
