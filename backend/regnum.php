@@ -4,6 +4,6 @@
 
   $sql = "SELECT Count(*) FROM registration";
   $result = $conn->query($sql);
-  echo $result
+  echo json_encode($result);
 
 ?>
