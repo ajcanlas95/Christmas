@@ -1,3 +1,6 @@
+<?php
+include '/backend/regnum.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,7 +64,7 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-8 mx-auto">
-              <h1 >Be part with 0 others Coming</h1>
+              <h1 >Be part with <?= $regnum;?> others Coming</h1>
               <p class="intro-text">24 February 2018 | 3:00PM<br/>Globe Circuit Event Grounds, Makati</p>
               <a href="#aylcat20" class="btn btn-circle js-scroll-trigger">
                 <i class="fa fa-angle-double-down animated"></i>
