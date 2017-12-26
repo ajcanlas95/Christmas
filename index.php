@@ -1,5 +1,5 @@
 <?php
-include '/backend/regnum.php';
+include './backend/regnum.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
