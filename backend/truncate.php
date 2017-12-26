@@ -10,7 +10,7 @@ if (mysqli_query($conn, $sql)) {
     $msg="Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
-echo json_encode($msg);
+echo $msg;
 con_close($conn);
 
 ?>

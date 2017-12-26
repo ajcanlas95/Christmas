@@ -12,6 +12,6 @@
         $msg[$row["id_reg"]]->reg_type=$row["reg_type"];
   }
   }
-  echo json_encode($msg);
+  echo $msg;
   con_close($conn);
 ?>
