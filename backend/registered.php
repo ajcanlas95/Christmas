@@ -7,9 +7,13 @@
   if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         $msg->name=$row["name"];
+        echo $row["name"];
         $msg->email=$row["email"];
+        echo $row["email"];
         $msg->cnum=$row["cnum"];
+        echo $row["cnum"];
         $msg->reg_type=$row["reg_type"];
+        echo $row["reg_type"];
         $value[$row["id_reg"]]->value=$msg;
   }
   }
