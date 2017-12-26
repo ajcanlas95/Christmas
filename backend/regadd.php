@@ -21,12 +21,12 @@ if ($valcount>0){
   $sql = "INSERT INTO registration( `name`, `email`, `cnum`, `reg_type`) VALUES ('".$name."','".$email."','".$cnum."','".$reg_type."');";
 
   if (mysqli_query($conn, $sql)) {
-      $msg="Registration Successful";
+      $regadd="Registration Successful";
   } else {
-      $msg="Error: " . $sql . "<br>" . mysqli_error($conn);
+      $regadd="Error: " . $sql . "<br>" . mysqli_error($conn);
   }
 } else {
-  $msg=$email." or ".$cnum." has a duplicate";
+  $regadd=$email." or ".$cnum." has a duplicate";
 }
 
 
@@ -38,6 +38,6 @@ function test_input($data) {
   return $data;
 }
 
-echo $msg;
+
 con_close($conn);
 ?>

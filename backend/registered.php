@@ -6,12 +6,12 @@
   $result = $conn->query($sql);
   if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
-        $msg[$row["id_reg"]]->name=$row["name"];
-        $msg[$row["id_reg"]]->email=$row["email"];
-        $msg[$row["id_reg"]]->cnum=$row["cnum"];
-        $msg[$row["id_reg"]]->reg_type=$row["reg_type"];
+        $registered[$row["id_reg"]]->name=$row["name"];
+        $registered[$row["id_reg"]]->email=$row["email"];
+        $registered[$row["id_reg"]]->cnum=$row["cnum"];
+        $registered[$row["id_reg"]]->reg_type=$row["reg_type"];
   }
   }
-  echo $msg;
+
   con_close($conn);
 ?>

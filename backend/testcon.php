@@ -4,10 +4,10 @@ include "database.php";
 
 // Check connection
 if ($conn->connect_error) {
-    $msg = "Connection failed: " . $conn->connect_error;
+    $testcon = "Connection failed: " . $conn->connect_error;
 }
-$msg = "Connected successfully";
+$testcon = "Connected successfully";
 
-echo $msg;
+
 con_close($conn);
 ?>

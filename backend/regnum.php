@@ -7,11 +7,11 @@
   if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        $msg=$row["REG"];
+        $regnum=$row["REG"];
     }
     } else {
-      $msg="0";
+      $regnum="0";
     }
-  echo $msg;
+
   con_close($conn);
 ?>
