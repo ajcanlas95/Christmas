@@ -7,5 +7,7 @@ $dbname = "aylcdb";
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-
+function con_close($con){
+    mysqli_close($con);
+}
 ?>

@@ -24,5 +24,5 @@ function test_input($data) {
 }
 
 echo json_encode($msg);
-
+con_close($conn);
 ?>

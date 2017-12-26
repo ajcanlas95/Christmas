@@ -13,5 +13,5 @@
       $msg="0";
     }
   echo json_encode($msg);
-
+  con_close($conn);
 ?>

@@ -9,5 +9,5 @@ if ($conn->connect_error) {
 $msg = "Connected successfully";
 
 echo json_encode($msg);
-
- ?>
+con_close($conn);
+?>
