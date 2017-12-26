@@ -10,9 +10,8 @@
         $msg[$row["id_reg"]]->email=$row["email"];
         $msg[$row["id_reg"]]->cnum=$row["cnum"];
         $msg[$row["id_reg"]]->reg_type=$row["reg_type"];
-        $value[$row["id_reg"]]->value=$msg[$row["id_reg"]];
   }
   }
-  echo json_encode($value);
+  echo json_encode($msg);
   con_close($conn);
 ?>
