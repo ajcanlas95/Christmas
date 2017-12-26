@@ -30,7 +30,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about-aylc">AYLC<i class="fa fa-camera-retro fa-5x"></i></a>
+              <a class="nav-link js-scroll-trigger" href="#about-aylc">AYLC</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#about-ayla">AYLA</a>
