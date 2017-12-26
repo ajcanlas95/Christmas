@@ -193,7 +193,7 @@ include './backend/regnum.php';
           <p>10 percent discount will be given to early registrants. Early registration and payment will run from December 15 to January 15.</p>
           <p>Excited to register? Fill up the form <b>here.</b></p>
         </div>
-      </div
+      </div>
     </section>
 
     <!-- Button trigger modal -->
