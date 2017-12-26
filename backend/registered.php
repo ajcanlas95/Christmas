@@ -11,7 +11,7 @@
         $msg->cnum=$row["cnum"];
         $msg->reg_type=$row["reg_type"];
         $value->id_reg=$row["id_reg"];
-        $value->value=$msg;
+        array_push($value,$msg);
   }
   }
   echo json_encode($value);
