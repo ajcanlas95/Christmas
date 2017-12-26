@@ -9,9 +9,7 @@ $reg_type= test_input($_GET["reg_type"]);
 
 
 $validate = "Select email,cnum from registration where email='".$email."' or cnum=".$cnum;
-$result = $conn->query($validate);
 if ($result->num_rows > 0) {
-  // output data of each row
 while($row = $result->fetch_assoc()) {
     $valcount=$row["REG"];
 }

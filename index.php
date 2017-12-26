@@ -13,6 +13,7 @@
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <link href="vendor/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
   </head>
 
@@ -29,7 +30,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about-aylc">AYLC</a>
+              <a class="nav-link js-scroll-trigger" href="#about-aylc">AYLC<i class="fa fa-camera-retro fa-5x"></i></a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#about-ayla">AYLA</a>
