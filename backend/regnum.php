@@ -12,6 +12,6 @@
     } else {
       $msg="0";
     }
-  echo json_encode($msg);
+  echo $msg;
   con_close($conn);
 ?>
