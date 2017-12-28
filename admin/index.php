@@ -41,7 +41,7 @@
         }
       }
     ?>
-    <div class="container" style="padding-top:15%;">
+    <div class="container" style="padding-top:13%;">
       <div class="col-lg-4 mx-auto">
         <form method="POST" action="./login.php">
           <div class="form-group">
