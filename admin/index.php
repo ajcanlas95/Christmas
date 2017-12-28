@@ -1,6 +1,7 @@
 <!doctype html>
 
 <?php
+  session_start();
   if ($_SESSION["login"] = "yes"){
     header("Location: ./admin.php");
   }
@@ -10,13 +11,15 @@
         $msg="Not Registered User";
     } elseif ($_GET["msglevel"]=="PASSWORD") {
         $msg="Invalid Password";
+    } elseif ($_GET["msglevel"]=="LOGOUT") {
+        $msg="See you again!";
     }
   }
 ?>
 
 <html lang="en">
   <head>
-    <title>Hello, world!</title>
+    <title>Login to Admin Panel</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,14 +30,20 @@
   <body>
     <?php
       if ($msg!="none"){
-        echo "<div class="alert alert-danger" role="alert">";
-        echo $msg;
-        echo "</div>"
+        if ($msg=="LOGOUT"){
+          echo "<div class="alert alert-success" role="alert">";
+          echo $msg;
+          echo "</div>";
+        }else{
+          echo "<div class="alert alert-danger" role="alert">";
+          echo $msg;
+          echo "</div>";
+        }
       }
     ?>
     <div class="container" style="padding-top:15%;">
       <div class="col-lg-4 mx-auto">
-        <form method="POST">
+        <form method="POST" action="./login.php">
           <div class="form-group">
             <label for="InputUser">Username:</label>
             <input type="text" class="form-control" id="InputUser" name="user" placeholder="Username" required>
