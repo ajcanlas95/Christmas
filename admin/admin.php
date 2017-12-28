@@ -1,7 +1,18 @@
 <?php
+  $msg=$_GET["msg"];
   session_start();
   if (!$_SESSION["login"]){
     header("Location: ./index.php");
+  }
+  include "../backend/database.php";
+  $user=$_SESSION["user"];
+  $pw=$_SESSION["password"];
+  $sql = "SELECT role_level as role FROM login where username='".$user."' and password='".$pw."'";
+  $result = $conn->query($sql);
+  if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+      $role_level=$row["role"];
+    }
   }
 
 ?>
@@ -20,7 +31,7 @@
     <a class="btn btn-primary" href="./logout.php">logout</a>
     <?php
       echo $_SESSION["user"];
-      echo $_SESSION["password"];
+      echo $role_level;
     ?>
 
     <!-- Optional JavaScript -->

@@ -30,18 +30,18 @@
   <body>
     <?php
       if ($msg!="none"){
-        if ($msg=="LOGOUT"){
-          echo "<div class="alert alert-success" role="alert">";
+        if ($_GET["msglevel"]=="LOGOUT"){
+          echo "<div class='alert alert-success' role='alert'>";
           echo $msg;
           echo "</div>";
         }else{
-          echo "<div class="alert alert-danger" role="alert">";
+          echo "<div class='alert alert-danger' role='alert'>";
           echo $msg;
           echo "</div>";
         }
       }
     ?>
-    <div class="container" style="padding-top:15%;">
+    <div class="container" style="padding-top:13%;">
       <div class="col-lg-4 mx-auto">
         <form method="POST" action="./login.php">
           <div class="form-group">
