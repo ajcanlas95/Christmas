@@ -1,4 +1,19 @@
 <!doctype html>
+
+<?php
+  if ($_SESSION["login"] = "yes"){
+    header("Location: ./admin.php");
+  }
+  $msg="none"
+  if ($_GET["msglevel"]){
+    if ($_GET["msglevel"]=="ERROR"){
+        $msg="Not Registered User";
+    } elseif ($_GET["msglevel"]=="PASSWORD") {
+        $msg="Invalid Password";
+    }
+  }
+?>
+
 <html lang="en">
   <head>
     <title>Hello, world!</title>
@@ -10,16 +25,23 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   </head>
   <body>
+    <?php
+      if ($msg!="none"){
+        echo "<div class="alert alert-danger" role="alert">";
+        echo $msg;
+        echo "</div>"
+      }
+    ?>
     <div class="container" style="padding-top:15%;">
       <div class="col-lg-4 mx-auto">
-        <form>
+        <form method="POST">
           <div class="form-group">
             <label for="InputUser">Username:</label>
-            <input type="email" class="form-control" id="InputUser" placeholder="Username" required>
+            <input type="text" class="form-control" id="InputUser" name="user" placeholder="Username" required>
           </div>
           <div class="form-group">
             <label for="InputPassword">Password:</label>
-            <input type="password" class="form-control" id="InputPassword" placeholder="Password" required>
+            <input type="password" class="form-control" id="InputPassword" name="pw" placeholder="Password" required>
           </div>
           <button type="submit" class="btn btn-primary">Login</button>
         </form>
