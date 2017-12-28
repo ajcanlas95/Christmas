@@ -2,10 +2,10 @@
 
 <?php
   session_start();
-  if ($_SESSION["login"] = "yes"){
+  if ($_SESSION["login"] == "yes"){
     header("Location: ./admin.php");
   }
-  $msg="none"
+  $msg="none";
   if ($_GET["msglevel"]){
     if ($_GET["msglevel"]=="ERROR"){
         $msg="Not Registered User";
