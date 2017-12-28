@@ -10,16 +10,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   </head>
   <body>
-    <div class="container" style="padding-top:10%;">
+    <div class="container" style="padding-top:15%;">
       <div class="col-lg-4 mx-auto">
         <form>
           <div class="form-group">
             <label for="InputUser">Username:</label>
-            <input type="email" class="form-control" id="InputUser" placeholder="Username">
+            <input type="email" class="form-control" id="InputUser" placeholder="Username" required>
           </div>
           <div class="form-group">
-            <label for="InputPassword">Password</label>
-            <input type="password" class="form-control" id="InputPassword" placeholder="Password">
+            <label for="InputPassword">Password:</label>
+            <input type="password" class="form-control" id="InputPassword" placeholder="Password" required>
           </div>
           <button type="submit" class="btn btn-primary">Login</button>
         </form>
