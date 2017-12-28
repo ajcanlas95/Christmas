@@ -31,11 +31,11 @@
     <?php
       if ($msg!="none"){
         if ($msg=="LOGOUT"){
-          echo "<div class="alert alert-success" role="alert">";
+          echo "<div class='alert alert-success' role='alert'>";
           echo $msg;
           echo "</div>";
         }else{
-          echo "<div class="alert alert-danger" role="alert">";
+          echo "<div class='alert alert-danger' role='alert'>";
           echo $msg;
           echo "</div>";
         }
