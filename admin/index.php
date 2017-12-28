@@ -30,7 +30,7 @@
   <body>
     <?php
       if ($msg!="none"){
-        if ($msg=="LOGOUT"){
+        if ($_GET["msglevel"]=="LOGOUT"){
           echo "<div class='alert alert-success' role='alert'>";
           echo $msg;
           echo "</div>";
